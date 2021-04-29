@@ -36,10 +36,10 @@ public class MySocketServerSingleSocket {
             if (message == null)
                 continue;
             if (message.toLowerCase().contains("weather")) {
-                outputToClient.println("The weather tomorrow will be sunny and maybe mixed!");
-            } else if (message.toLowerCase().contains("hello ")) {
-                outputToClient.println("Hiiii I'm a server. How are you?");
-            } else outputToClient.println("Hmmmmm... you sent me the message: [" + message + "]");
+                outputToClient.println("The weather tomorrow will be snowy and maybe some sun!");
+            } else if (message.toLowerCase().contains("hello ") || message.toLowerCase().contains("hi ")) {
+                outputToClient.println("Hiiii I'm a server. Try to ask about the weather");
+            } else outputToClient.println("Hmmmmm... you sent me the message: [" + message + "] ... Do you want to say something else?");
         }
 
         inputFromClient.close();

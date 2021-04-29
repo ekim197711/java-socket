@@ -46,8 +46,8 @@ public class MySocketServerMultipleSockets {
                 continue;
             if (message.toLowerCase().contains("weather")) {
                 outputToClient.println("The weather tomorrow will be sunny and maybe mixed!");
-            } else if (message.toLowerCase().contains("hello ")) {
-                outputToClient.println("Hiiii I'm a server. How are you?");
+            } else if (message.toLowerCase().contains("hello ") || message.toLowerCase().contains("hi ")) {
+                outputToClient.println("Hiiii I'm a server. Have a nice day");
             } else outputToClient.println("Hmmmmm... you sent me the message: [" + message + "]");
         }
         inputFromClient.close();
